@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/battery_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:padding="5dp"
+        android:background="@android:color/darker_gray"
+        android:text="10%"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/plus_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/background_light"
+        android:layout_alignTop="@+id/battery_percentage"
+        android:layout_alignBottom="@+id/battery_percentage"
+        android:layout_toRightOf="@+id/battery_percentage"
+        android:src="@drawable/plus" />
+
+    <ImageButton
+        android:id="@+id/minus_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/background_light"
+        android:layout_alignTop="@+id/battery_percentage"
+        android:layout_toLeftOf="@+id/battery_percentage"
+        android:src="@drawable/minus" />
+
+    
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minus_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="I am running out of battery"
+        android:text="I am running out of battery"
+        android:imeOptions="actionSend" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/show_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="96dp"
+        android:height="50dp"
+        android:text="Contacts"
+        android:width="1000dp" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/battery_percentage"
+        android:layout_below="@+id/message"
+        android:layout_marginTop="33dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/minus_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Send through Text" />
+
+</RelativeLayout>
